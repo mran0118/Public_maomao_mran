@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- starting head tag -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Rong Ran">
+    <title>Sign up order page</title>
+    <style>
+        label textarea {
+            vertical-align: middle;
+        }
+    </style>
+    <!-- setting table boader, table header and table data with CSS -->
+    <style>
+        #table1 #table1 th,
+        #table1 td {
+            border: 0px
+        }
+
+        #table2,
+        #table2 th,
+        #table2 td {
+            border: 1px solid grey;
+        }
+
+        #table3,
+        #table3 th,
+        #table3 td {
+            border: 0px;
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+<!-- starting body tag -->
+
+<body>
+    <main>
+        <header>
+            <h3 style="color:rgb(255, 0, 64)">Order Form</h3>
+        </header>
+        <!-- starting form tag -->
+        <form action="/action_page.php" method="GET" enctype="text/plain">
+            <!-- grouping user's information in a form -->
+            <fieldset>
+                <!-- defining the caption of Basic Information using <legend> tag -->
+                <legend>Basic Information</legend>
+                <table id="table1">
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" id="fname" name="fname" value="Rong" maxlength="30" disabled
+                                style="width:250px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" id="email" name="StudentEmail" value="ran00005@algonquinlive.com"
+                                style="width:250px;" required></td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td><textarea id="address" name="address" rows="6" cols="25"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Postcode:</td>
+                        <td><input type="text" id="postcode" name="postcode"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <!-- grouping Product information in a form -->
+            <fieldset>
+                <!-- defining the caption of Product Information using legend tag -->
+                <legend>Product Information</legend>
+                <table id="table2" style="width: 70%">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Part Number</th>
+                            <th>Quantity
+
+                            </th>
+                            <th>Unit Price</th>
+                            <th style="width: 25%">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Box</td>
+                            <td>AC100</td>
+                            <td><input type="number" id="q1" name="q1" style="width: 98%" min="1" max="100"></td>
+                            <td>$5</td>
+                            <td><input type="number" id="p1" name="p1" style="width: 98%"></td>
+                        </tr>
+                        <tr>
+                            <td>Coffee Table</td>
+                            <td>AC200</td>
+                            <td><input type="number" id="q2" name="q2" style="width: 98%" min="1" max="100"></td>
+                            <td>$100</td>
+                            <td><input type="number" id="p2" name="p2" style="width: 98%"></td>
+                        </tr>
+                        <tr>
+                            <td>Chair</td>
+                            <td>AC300</td>
+                            <td><input type="number" id="q3" name="q3" style="width: 98%" min="1" max="100"></td>
+                            <td>$150</td>
+                            <td><input type="number" id="p3" name="p3" style="width: 98%"></td>
+                        </tr>
+                        <tr>
+                            <td>Desk</td>
+                            <td>AC400</td>
+                            <td><input type="number" id="q4" name="q4" style="width: 98%" min="1" max="100"></td>
+                            <td>$120</td>
+                            <td><input type="number" id="p4" name="p4" style="width: 98%"></td>
+                        </tr>
+                        <tr>
+                            <td>Correction Table</td>
+                            <td>AC500</td>
+                            <td><input type="number" id="q5" name="q5" style="width: 98%" min="1" max="100"></td>
+                            <td>$130</td>
+                            <td><input type="number" id="p5" name="p5" style="width: 98%"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <!-- setting inline contents: Text Alignment to right -->
+                            <td colspan="4" style="text-align:right">Total:</td>
+                            <td><input type="number" id="p6" name="p6" style="width: 98%"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </fieldset>
+            <br>
+            <!-- setting credit card information -->
+            <p><b>Credit Card Information</b></p>
+
+            <table id="table3">
+                <tr>
+                    <td>Card Type:</td>
+                    <td rowspan="2">
+                        <label for="creditNumber">&nbsp;Card Number:</label>
+                        <input type="tel" id="creditNumber" name="cardNumber" minlength="13" maxlength="19">
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="masterCard" name="card" value="Mastercard">
+                        <label for="masterCard">Mastercard</label> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="visa" name="card" value="Visa">
+                        <label for="visa">Visa</label>
+                    </td>
+                    <td rowspan="2">
+                        <label for="expiryDate">&ensp; &nbsp;Expiry Date:</label>
+                        <input type="date" id="expiryDate" name="datetime" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="giftCard" name="card" value="Gift Card">
+                        <label for="giftCard">Gift Card</label>
+                    </td>
+                </tr>
+            </table>
+
+            <label for="deliveryAddress"><b>Delivery Address:</b>
+                <textarea id="deliveryAddress" name="deliveryAddress" rows="6" cols="25"></textarea>
+            </label>
+            <br>
+            <br>
+            <br>
+            <!--specifying a clickable button by using the button tag -->
+            <button type="submit">Send Order</button>
+            <button type="reset">clear From</button>
+            <br>
+            <br>
+        </form>
+
+    </main>
+</body>
+
+</html>

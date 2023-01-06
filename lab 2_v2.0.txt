@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Rong Ran">
+    <title>Sign up order page</title>
+</head>
+<!-- starting body tag -->
+
+<body>
+    <main>
+        <fieldset>
+            <label for="the-form" style="color:rgb(255, 0, 64);">
+                <h3>Order Form</h3>
+            </label>
+            <form action="/action_page.php" method="GET" id="the-form" enctype="text/plain">
+                <fieldset>
+                    <legend>Basic Information</legend>
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" value="Rong" maxlength="30" disabled
+                        style="width:250px;">
+                    <br>
+                    <br>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" style="width:250px;" required>
+                    <br>
+                    <br>
+                    <label for="email">Email:&emsp;&ensp;&nbsp;</label>
+                    <input type="email" id="email" name="StudentEmail" value="ran00005@algonquinlive.com"
+                        style="width:250px;" required>
+                    <br>
+                    <br>
+                    <style>
+                        label textarea {
+                            vertical-align: middle;
+                        }
+                    </style>
+                    <label for="address">Address:&ensp;&nbsp;
+                        <textarea id="address" name="address" rows="6" cols="25"></textarea>
+                    </label>
+                    <br>
+                    <br>
+                    <label for="postcode">Postcode: &nbsp; </label>
+                    <input id="postcode" id="postcode" name="postcode" style="width:100px;">
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Product Information</legend>
+                    <style>
+                        table,
+                        th,
+                        td {
+                            border: 2px solid grey;
+                        }
+                    </style>
+                    <table style="width: 70%">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Part Number</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th style="width: 30%">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Box</td>
+                                <td>AC100</td>
+                                <td></td>
+                                <td>$5</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Coffee Table</td>
+                                <td>AC200</td>
+                                <td></td>
+                                <td>$100</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Chair</td>
+                                <td>AC300</td>
+                                <td></td>
+                                <td>$150</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Desk</td>
+                                <td>AC400</td>
+                                <td></td>
+                                <td>$120</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Correction Table</td>
+                                <td>AC500</td>
+                                <td></td>
+                                <td>$130</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4" style="text-align:right">Total:</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </fieldset>
+                <br>
+                <p><b>Credit Card Information</b></p>
+                <label for="cardType">Card Type:</label>
+                &emsp; &emsp; &emsp;
+
+                <label for="ccn">Card Number:</label>
+                <input type="tel" id="ccn" name="cardNumber" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                    autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"><br>
+
+                <input type="radio" id="masterCard" name="card" value="Mastercard">
+                <label for="masterCard">Mastercard</label> <br>
+
+                <input type="radio" id="visa" name="card" value="Visa">
+                <label for="visa">Visa</label>
+                &emsp; &emsp; &emsp; &emsp;
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="date" id="expiryDate" name="datetime" required><br>
+
+                <input type="radio" id="giftCard" name="card" value="Gift Card">
+                <label for="giftCard">Gift Card</label><br>
+
+                <style>
+                    label textarea {
+                        vertical-align: middle;
+                    }
+                </style>
+                <label for="address"><b>Delivery Address:</b>
+                    <textarea id="address" name="address" rows="6" cols="25"></textarea>
+                </label>
+                <br>
+                <br>
+                <br>
+                <button type="submit">Send Order</button>
+                <button type="reset">clear From</button>
+                <br>
+                <br>
+
+
+            </form>
+
+
+        </fieldset>
+    </main>
+</body>
+
+</html>

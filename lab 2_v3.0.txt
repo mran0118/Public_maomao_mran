@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- starting head tag -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Rong Ran">
+    <title>Sign up order page</title>
+    <!-- setting textarea label tag align in the middle -->
+    <style>
+        label textarea {
+            vertical-align: middle;
+        }
+    </style>
+    <!-- setting boader of table, table header and table data with 2px with soild grey color -->
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid grey;
+        }
+    </style>
+</head>
+<!-- starting body tag -->
+
+<body>
+    <main>
+        <!-- grouping the order page elements in a form-->
+        <fieldset>
+            <h3 style="color:rgb(255, 0, 64)"> Order Form</h3>
+            <!-- starting form tag -->
+            <form action="/action_page.php" method="GET" enctype="text/plain">
+                <!-- grouping user's information in a form -->
+                <fieldset>
+                    <!-- defining the caption of Basic Information using <legend> tag -->
+                    <legend>Basic Information</legend>
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" value="Rong" maxlength="30" disabled
+                        style="width:250px;">
+                    <br>
+                    <br>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" style="width:250px;" required>
+                    <br>
+                    <br>
+                    <label for="email">Email:&emsp;&ensp;&nbsp;</label>
+                    <input type="email" id="email" name="StudentEmail" value="ran00005@algonquinlive.com"
+                        style="width:250px;" required>
+                    <br>
+                    <br>
+
+                    <label for="address">Address:&ensp;&nbsp;
+                        <textarea id="address" name="address" rows="6" cols="25"></textarea>
+                    </label>
+                    <br>
+                    <br>
+                    <label for="postcode">Postcode: &nbsp; </label>
+                    <input type="text" id="postcode" name="postcode" style="width:100px;">
+                </fieldset>
+                <br>
+                <!-- grouping Product information in a form -->
+                <fieldset>
+                    <!-- defining the caption of Product Information using legend tag -->
+                    <legend>Product Information</legend>
+
+                    <table style="width: 70%">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Part Number</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th style="width: 30%">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Box</td>
+                                <td>AC100</td>
+                                <td></td>
+                                <td>$5</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Coffee Table</td>
+                                <td>AC200</td>
+                                <td></td>
+                                <td>$100</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Chair</td>
+                                <td>AC300</td>
+                                <td></td>
+                                <td>$150</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Desk</td>
+                                <td>AC400</td>
+                                <td></td>
+                                <td>$120</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Correction Table</td>
+                                <td>AC500</td>
+                                <td></td>
+                                <td>$130</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <!-- setting inline contents: Text Alignment to right -->
+                                <td colspan="4" style="text-align:right">Total:</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </fieldset>
+                <br>
+                <!-- setting credit card information -->
+                <p><b>Credit Card Information</b></p>
+                <p>Card Type:
+                    &emsp; &emsp; &emsp;
+                    <!-- setting credit card number min to 13, max to 19 from 0 to 9 , giving a user an example by using placeholder tag-->
+                    <label for="creditNumber">Card Number:</label>
+                    <input type="tel" id="creditNumber" name="cardNumber" minlegth="13" maxlength="19"
+                        placeholder="xxxx xxxx xxxx xxxx">
+                </p>
+                <!--using radio buttion to select a single item from a small list of choices-->
+                <input type="radio" id="masterCard" name="card" value="Mastercard">
+                <label for="masterCard">Mastercard</label> <br>
+
+                <input type="radio" id="visa" name="card" value="Visa">
+                <label for="visa">Visa</label>
+                &emsp; &emsp; &emsp; &emsp;
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="date" id="expiryDate" name="datetime" required><br>
+
+                <input type="radio" id="giftCard" name="card" value="Gift Card">
+                <label for="giftCard">Gift Card</label><br>
+                <label for="deliveryAddress"><b>Delivery Address:</b>
+                    <textarea id="deliveryAddress" name="deliveryAddress" rows="6" cols="25"></textarea>
+                </label>
+                <br>
+                <br>
+                <br>
+                <!--specifying a clickable button by using the button tag -->
+                <button type="submit">Send Order</button>
+                <button type="reset">clear From</button>
+                <br>
+                <br>
+
+
+            </form>
+
+
+        </fieldset>
+    </main>
+</body>
+
+</html>
